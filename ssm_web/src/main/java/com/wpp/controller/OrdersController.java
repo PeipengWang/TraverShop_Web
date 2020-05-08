@@ -31,13 +31,11 @@ public class OrdersController {
     @RequestMapping("/findAll.do")
     public ModelAndView findAll(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name = "size", required = true, defaultValue = "4") int size) throws Exception {
         ModelAndView mv = new ModelAndView();
-        System.out.println("page="+page);
-        System.out.println("size="+size);
         List<Orders> ordersList = ordersService.findAll(page, size);
-        //PageInfo就是一个分页Bean
+        //PageInfo就是一个分页Bean,
         PageInfo pageInfo=new PageInfo(ordersList);
-        mv.addObject("pageInfo",pageInfo);
-        mv.setViewName("orders-page-list");
+        mv.addObject("pageInfo",pageInfo);//存储为pageInfo
+        mv.setViewName("orders-page-list");//返回的一个页面名字
         return mv;
     }
 

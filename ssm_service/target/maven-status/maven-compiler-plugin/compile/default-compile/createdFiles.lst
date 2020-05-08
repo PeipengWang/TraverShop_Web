@@ -1,0 +1,4 @@
+com\wpp\service\impl\OrdersServiceImpl.class
+com\wpp\service\impl\ProductService.class
+com\wpp\service\IOrdersService.class
+com\wpp\service\IProductService.class

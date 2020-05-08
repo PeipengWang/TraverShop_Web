@@ -1,0 +1,4 @@
+com\wpp\domain\Member.class
+com\wpp\domain\Product.class
+com\wpp\domain\Orders.class
+com\wpp\domain\Traveller.class
